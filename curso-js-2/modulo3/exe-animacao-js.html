@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Animação</title>
+    <style>
+        .conteudo h1 span{
+            font-size: 0.5em;
+            cursor: pointer;
+        }
+
+        .conteudo p{
+            height: 0px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .mostrar{
+            height: 70px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Título do Conteúdo <span>Ver mais</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit perferendis voluptatum temporibus quod? Architecto excepturi nesciunt, soluta enim sunt provident, hic ipsum odio ut neque, nam esse veniam explicabo!</p>
+    </div>
+
+    <div class="conteudo">
+        <h1>Título do Conteúdo <span>Ver mais</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit perferendis voluptatum temporibus quod? Architecto excepturi nesciunt, soluta enim sunt provident, hic ipsum odio ut neque, nam esse veniam explicabo!</p>
+    </div>
+
+    <div class="conteudo">
+        <h1>Título do Conteúdo <span>Ver mais</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit perferendis voluptatum temporibus quod? Architecto excepturi nesciunt, soluta enim sunt provident, hic ipsum odio ut neque, nam esse veniam explicabo!</p>
+    </div>
+
+    <div class="conteudo">
+        <h1>Título do Conteúdo <span>Ver mais</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto suscipit perferendis voluptatum temporibus quod? Architecto excepturi nesciunt, soluta enim sunt provident, hic ipsum odio ut neque, nam esse veniam explicabo!</p>
+    </div>
+
+    <script>
+        /* var span = document.querySelectorAll('.conteudo span');
+
+        span.addEventListener('click', function(){
+            var conteudo = document.querySelector('.conteudo p')
+
+            for(let i=0; i<span.length; i++){
+                if(conteudo.classList.contains('mostrar')){
+                    span[i].innerHTML = 'Ver mais'
+                    conteudo.classList.remove('mostrar')
+                }else{
+                    span[i].innerHTML = 'Ocultar'
+                    conteudo.classList.add("mostrar")
+                }
+            }
+        }); */
+
+        var spans = document.querySelectorAll('.conteudo span');
+
+        spans.forEach(function(span){
+            span.addEventListener('click', function() {
+            var conteudo = this.parentElement.nextElementSibling;
+                if (conteudo.classList.contains('mostrar')) {
+                    this.innerHTML = 'Ver mais!';
+                    conteudo.classList.remove('mostrar');
+                } else {
+                    this.innerHTML = 'Ocultar';
+                    conteudo.classList.add('mostrar');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
