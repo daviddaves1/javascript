@@ -1,0 +1,50 @@
+<html>
+    <body>
+        <script>
+            //Calculadora dinamica
+
+            //Numero inicial
+            //Sinal
+            //Numero final
+
+            var number1 = window.prompt("Insert the number: ");
+            var operator = window.prompt("Insert the operator: ");
+            var number2 = window.prompt("Insert other number: ");
+            var result=0;
+
+                while(operator != "+" && operator != "-" && operator != "*" && operator != "/"){
+                    window.alert("Por favor, insira um desses operadores: +   -   *   /");
+                    var operator = window.prompt("Insert the operator: ");
+                }
+
+                number1 = parseFloat(number1);
+                number2 = parseFloat(number2);
+
+                switch(operator){
+                    case "+":
+                        result = number1 + number2;
+                        window.alert(`Result: ${number1} + ${number2} = ${result}`);
+                    
+                    case "-":
+                        result = number1 - number2;
+                        window.alert(`Result: ${number1} - ${number2} = ${result}`);
+
+                    case "*":
+                        result = number1 * number2;
+                        window.alert(`Result: ${number1} x ${number2} = ${result}`);
+                        
+                    case "/":
+                        result = number1 / number2;
+                        window.alert(`Result: ${number1} / ${number2} = ${result}`);
+                }
+
+                
+
+            /* Importante: Tome cuidado com o que você comenta em seus códigos, pois no JS os comentários são abertos ao publico, e qualquer pessoa pode ver. */
+
+            
+
+
+        </script>
+    </body>
+</html>

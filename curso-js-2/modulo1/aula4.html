@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <script>
+            //introducao as funcoes
+
+            function teste(){
+                console.log("Chamando a funcao");
+            }
+            teste();
+
+
+
+            function verificar_empresa(parametro){
+                var parametro = "Senha Engenharia";
+
+                if(parametro == "Senha Engenharia" || parametro == "SENHA ENGENHARIA" || parametro == "senha engenharia"){
+                    console.log("Essa empresa ja esta cadastrada!");
+                } else{
+                    return console.log(`A empresa ${parametro} foi cadastrada com sucesso!`);
+                }
+            }
+            verificar_empresa();
+
+
+
+            //variavel recebendo uma funcao
+            let receive = function(){
+                window.alert("Welcome to my city!");
+            }
+            console.log(receive);
+
+
+
+          //declarando a funcao e chamando ela em seguida
+            (function(){
+                console.log("Hello, I are uanderful everyday!");
+            })();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+  <html>
+    <body>
+        <script>
+            function Pessoa(){          //definindo função construtora que tem como padrão criar objetos no JS
+                this.name = "David";    //definindo o atributo "name" para o objeto "this" onde "name" recebe "David". se usasse "var name" dar erro, pois orientação o objetos é outra pegada"
+            
+                /* o this.name é basicamente uma variável */
+            }
+
+            var pessoa = new Pessoa();
+            var pessoa2 = new Pessoa();
+            /* Essas 2 variaveis estão recebendo "David" */
+
+            pessoa.name = "João"; //alterando "David" para "João" na variável 'pessoa'
+
+            window.alert(pessoa.name); //mostrando "João" na tela
+        </script>      
+    </body>
+  </html>

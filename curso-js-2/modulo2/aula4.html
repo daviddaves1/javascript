@@ -1,0 +1,71 @@
+<html>
+    <body>
+        <script>        
+            class Animal{
+                constructor(name){ //um dado está sendo passado como parametro 
+                    this.name = name; //criando o atributo this.name que está recebendo name   
+                }
+                printName(){
+                    return this.name;
+                }
+            }
+
+            class Cachorro extends Animal{ //Aqui está dizendo o seguinte: declare a classe 'Cachorro' e herde tudo da classe 'Animal'. E é para isso que serve o comando extends
+                constructor(name){
+                    super(name); //invocando o construtor da class mãe (Animal)
+                    this.raca = 'Bulldog';
+                }
+                printName(){
+                    return this.raca;
+                }
+            }
+
+            cachorro = new Cachorro("Fofinha"); //é obrigatório que quando a função mãe (Animal) possui passagem por parametro, deve sempre passar o valor para ela, senão vai dar undefined quando for dar o alert, pois a função está retornando o this.name que é o valor que vc informou aí
+            alert(cachorro.printName());
+            alert(cachorro.name);
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- Criando Classes:
+
+O código define duas classes usando a sintaxe de classes do JavaScript:
+
+Animal:
+
+Construtor (constructor(name)):
+Recebe um parâmetro name e o armazena na propriedade this.name da instância da classe.
+Método printName():
+Retorna o valor da propriedade this.name, que representa o nome do animal.
+Cachorro (extends Animal):
+
+Herança (extends Animal):
+A classe Cachorro herda todas as propriedades e métodos da classe Animal.
+Construtor (constructor(name)):
+Chama o construtor da classe base (super(name)) para inicializar a propriedade name herdada.
+Adiciona uma nova propriedade this.raca e define seu valor como "Bulldog".
+Método printName():
+Retorna o valor da propriedade this.raca, que representa a raça do cachorro, ignorando a implementação herdada da classe Animal.
+Criando e Usando Objetos:
+
+Instanciando um Cachorro:
+A linha cachorro = new Cachorro("Fofinha"); cria um novo objeto cachorro da classe Cachorro e passa o nome "Fofinha" para o construtor.
+Acessando Propriedades:
+A linha alert(cachorro.printName()); chama o método printName() no objeto cachorro e exibe a raça do cachorro no alert, que neste caso é "Bulldog".
+A linha alert(cachorro.name); acessa diretamente a propriedade name herdada da classe Animal e exibe o nome do cachorro no alert, que também é "Fofinha".
+Observações:
+
+A passagem de parâmetro no construtor da classe Animal é obrigatória, pois o método printName() depende do valor de name para funcionar corretamente.
+O método printName() da classe Cachorro redefine o comportamento herdado da classe Animal, retornando a raça do cachorro em vez do nome.
+Este código demonstra conceitos básicos de herança em JavaScript, permitindo a criação de classes com funcionalidades específicas e reutilizáveis.
+Resumo:
+
+O código cria um modelo de classe para representar animais e uma classe derivada para representar cachorros. Um objeto cachorro é instanciado e suas propriedades são acessadas para demonstrar como a herança e a redefinição de métodos funcionam em JavaScript. -->

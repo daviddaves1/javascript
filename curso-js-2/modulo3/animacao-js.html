@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style> 
+        body{
+            color: rgba(1, 78, 0, 0.758);
+            background-color: rgba(171, 255, 171, 0.315);
+        }
+        .box{
+            width: 200px;
+            height: 200px;  
+            background-color: red;
+            margin-left: 0px;
+        }
+        .aninEsquerda{
+            transition: 1s;
+            margin-left: 90px;
+            margin-top: 20px;
+            background-color: green;
+        }
+    </style>
+    <div class="box"></div>
+    <script>
+        setTimeout(()=>{
+            box.classList.add('aninEsquerda')
+            alert('funcionando');
+        },1000);
+
+        var box = document.querySelectorAll('.box')[0];
+        box.addEventListener('click',()=>{
+            box.classList.add('aninEsquerda')
+        });
+    </script>
+
+    <br><br><br>
+    <p>Solução proposta:</p>
+    <pre><code><strong>
+        var spans = document.querySelectorAll('.conteudo span');
+        spans.forEach(function(span) {
+        span.addEventListener('click', function() {
+        var conteudo = this.parentElement.nextElementSibling;
+        if (conteudo.classList.contains('mostrar')) {
+        this.innerHTML = 'Ver mais!';
+        conteudo.classList.remove('mostrar');
+        } else {
+        this.innerHTML = 'Ocultar';
+        conteudo.classList.add('mostrar');
+        }
+        });
+        });
+    </strong></code></pre>
+
+</body>
+</html>

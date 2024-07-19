@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <script>
+
+            function Pessoa(){
+                this.name = 'Guilherme';
+                this.idade = 27;
+                this.printName = function(number){
+                    window.alert(number);
+                };
+                this.returnAnimal = function(animal){
+                    return animal;
+                }
+            }
+
+             function Animal(){
+                this.name = "Cachorro";
+                this.raca = "Vira Lata";
+            }
+               
+            var pessoa = new Pessoa();
+            var animal = new Animal();
+
+            animal.raca = "Shitzu";
+
+            alert(pessoa.returnAnimal(animal).raca);
+
+        </script>
+    </body>
+</html>
