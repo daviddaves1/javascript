@@ -1,5 +1,5 @@
 var select = document.getElementsByTagName('p');
-const v = 10;
+const v = 10;   
 
 /* window.alert(select.length); */
 /* window.alert(select[2].innerHTML); */
@@ -10,5 +10,5 @@ const v = 10;
 } */
 
 for (var i=0; i<v; i++){
-    select[0].innerHTML = select[0].innerHTML + ' algo';
+    select[0].innerHTML = select[0].innerHTML + ' - algo';
 }
