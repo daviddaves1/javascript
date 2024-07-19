@@ -8,6 +8,7 @@
 <body>
     <style> 
         body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             color: rgba(1, 78, 0, 0.758);
             background-color: rgba(171, 255, 171, 0.315);
         }
@@ -16,9 +17,10 @@
             height: 200px;  
             background-color: red;
             margin-left: 0px;
+            border-radius: 10px;
         }
         .aninEsquerda{
-            transition: 1s;
+            transition: 1.3s;
             margin-left: 90px;
             margin-top: 20px;
             background-color: green;
@@ -28,7 +30,7 @@
     <script>
         setTimeout(()=>{
             box.classList.add('aninEsquerda')
-            alert('funcionando');
+            
         },1000);
 
         var box = document.querySelectorAll('.box')[0];
