@@ -7,7 +7,7 @@
 </head>
 <body>
     <style> 
-        body{
+        /* body{
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             color: rgba(1, 78, 0, 0.758);
             background-color: rgba(171, 255, 171, 0.315);
@@ -24,11 +24,30 @@
             margin-left: 90px;
             margin-top: 20px;
             background-color: green;
+        } */
+
+        .conteudo h2 span{
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .conteudo p{
+            height: 10px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .mostrar{
+            height: 70px !important;
         }
     </style>
-    <div class="box"></div>
+
+    <div class="conteudo">
+        <h2>Título do conteúdo <span>Ver mais!</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aut dolorum mollitia reprehenderit suscipit, repellendus molestias! Placeat voluptatum ea, eos ad, pariatur dolore, molestias sapiente quod corrupti voluptatem non excepturi?</p>
+    </div>
     <script>
-        setTimeout(()=>{
+        /* setTimeout(()=>{
             box.classList.add('aninEsquerda')
             
         },1000);
@@ -36,8 +55,25 @@
         var box = document.querySelectorAll('.box')[0];
         box.addEventListener('click',()=>{
             box.classList.add('aninEsquerda')
+        }); */
+
+        var span  = document.querySelector('.conteudo span');
+
+        span.addEventListener('click', function(){
+            var conteudo = document.querySelector('.conteudo p')
+
+            if(conteudo.classList.contains('mostrar')){
+                span.innerHTML = 'Ver mais'
+                conteudo.classList.remove('mostrar')
+            }else{
+                span.innerHTML = 'Ocultar'
+                conteudo.classList.add("mostrar")
+
+            }
         });
     </script>
+    </body>
+</html>
 
     <br><br><br>
     <p>Solução proposta:</p>
