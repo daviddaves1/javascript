@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: 25pt Arial;
+            background: rgb(0, 177, 0);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id = 'area'> 
+        Interaja...
+    </div>
+
+    <script>
+
+        /* Para detectar erros de código, basta vc ir no navegador, clicar com o
+        botão direito e ir em inspecionar, depois vá no canto superior direito e
+        lá vai estar mostrando os erros e onde eles estão no código. */
+
+        var area = Window.document.getElementById('area') 
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+            
+        function clicar(){
+            area.innerText = 'CLICOU!'
+            area.style.background = 'red'
+        }
+        function entrar(){
+            area.innerText = 'ENTROU!'
+        }
+        function sair(){
+            area.innerText = 'SAIU!'
+            area.style.background = 'green'
+        }
+        
+    </script>
+</body>
+</html>

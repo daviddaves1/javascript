@@ -1,0 +1,32 @@
+<!-- Faça um programa JavaScript que receba 3 números informados pelo usuário e em seguida apresente uma
+mensagem de alerta informando qual é o maior número dentre os números informados. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <h1>Exercício 3</h1>
+<body>
+    <script>
+        var num1 = Number(window.prompt('Digite um número: '))
+        var num2 = Number(window.prompt('Digite outro número: '))
+        var num3 = Number(window.prompt('Digite o terceiro número: ')  )
+        
+        if(num1 > num2 && num1 > num3){
+            window.alert(`${num1} é o maior!`)
+        }
+        else if(num2 > num1 && num2 > num3){
+            window.alert(`${num2} é o maior!`)
+        }
+        else if(num3 > num2 && num3 > num1){
+            window.alert(`${num3} é o maior`)
+        } 
+        else{
+            window.alert("Todos os números são iguais!")
+        }
+    </script>
+</body>
+</html>

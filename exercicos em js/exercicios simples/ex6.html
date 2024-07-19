@@ -1,0 +1,77 @@
+<!-- Calculadora Simples
+Crie uma calculadora simples em JavaScript que seja capaz de realizar operações básicas,
+como soma, subtração, multiplicação e divisão. Utilize HTML e CSS para criar uma interface
+amigável e JavaScript para realizar os cálculos. -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 6</h1>
+    <h2>CALCULADORA SIMPLES</h2>
+    <button onclick="adicao()">ADIÇÃO</button>
+    <button onclick="subtra()">SUBTRAÇÃO</button>
+    <button onclick="multip()">MULTIPLICAÇÃO</button>
+    <button onclick="divisao()">DIVISÃO</button>
+    <button onclick="bhaskara()">EQUAÇÃO DO 2º GRAU</button>
+    <!-- <button onclick="bhaskara()">EQUAÇÃO DE 2º GRAU</button> -->
+
+    <script>
+        function adicao(){
+            var n1 = Number(window.prompt("Digite um número para somar: "));
+            var n2 = Number(window.prompt("Digite outro número para somar: "));
+            var soma = n1 + n2;
+            window.alert(`${n1} + ${n2} = ${soma.toFixed(2).replace('.', ',')}`);
+        }
+
+        function subtra(){
+            var n1 = Number(window.prompt("Digite um número para subtrair: "));
+            var n2 = Number(window.prompt("Digite outro número para subtrair: "));
+            var subtra = n1 - n2;
+            window.alert(`${n1} - ${n2} = ${subtra.toFixed(2).replace('.', ',')}`);
+        }
+
+        function multip(){
+            var n1 = Number(window.prompt("Digite um número para multiplicar: "));
+            var n2 = Number(window.prompt("Digite outro número para multiplicar: "));
+            var multip = n1 * n2;
+            window.alert(`${n1} x ${n2} = ${multip.toFixed(2).replace('.', ',')}`);
+        }
+
+        function divisao(){
+            var n1 = Number(window.prompt("Digite um número para dividir: "));
+            var n2 = Number(window.prompt("Digite outro número para dividir: "));
+            var divisao = n1 / n2;
+            window.alert(`${n1} / ${n2} = ${divisao.toFixed(2).replace('.', ',')}`);
+        }
+
+        function bhaskara(){
+            var a=0, b=0, c=0, delta=0, x1=0, x2=0;
+            var a = Number(window.prompt("Digite o valor de A: "));
+            var b = Number(window.prompt("Digite o valor de B: "));
+            var c = Number(window.prompt("Digite o valor de C: "));
+
+            delta = b*b -4 * a * c;
+
+            window.alert(`Delta = ${delta}`)
+
+            if(delta > 0){
+                x1 = (-b + Math.sqrt(delta)) /(2*a);
+                x2 = (-b - Math.sqrt(delta)) /(2*a);
+                window.alert(`Raíz 1 = ${x1}        Raiz 2 = ${x2}`);
+            }
+            else if(delta == 0){
+                x1 = (-b + Math.sqrt(delta)) /(2*a);
+                window.alert(`Raíz = ${x1}`);
+            } else{
+                window.alert("A equação não possui raízes reais");
+            }
+            
+        } 
+    </script>
+</body>
+</html>
