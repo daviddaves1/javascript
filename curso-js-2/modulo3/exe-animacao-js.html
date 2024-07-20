@@ -1,3 +1,5 @@
+<!-- Faça em JS, HTML e CSS, algumas opções de ver mais, onde ao serem clicadas, mostrarão conteúdos ocultos. -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,15 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício de Animação</title>
     <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: rgba(255, 98, 0, 0.207);
+        }
+
+        .conteudo{
+            background-color: rgb(255, 102, 0);
+            border-radius: 5px;
+        }
+
         .conteudo h1 span{
             font-size: 0.5em;
             cursor: pointer;
+            margin-left: 3%;
+        }
+
+        .conteudo h1{
+            padding: 15px 0px 0px 20px;
         }
 
         .conteudo p{
             height: 0px;
             overflow: hidden;
-            transition: 0.5s;
+            transition: 0.3s;
+            padding: 2px 0px 0px 20px;
         }
 
         .mostrar{
@@ -61,14 +79,14 @@
 
         var spans = document.querySelectorAll('.conteudo span');
 
-        spans.forEach(function(span){
+        spans.forEach(function(span){ //itera sobre todos os elementos span usando uma função anônima
             span.addEventListener('click', function() {
-            var conteudo = this.parentElement.nextElementSibling;
-                if (conteudo.classList.contains('mostrar')) {
-                    this.innerHTML = 'Ver mais!';
+            var conteudo = this.parentElement.nextElementSibling; //o this se refere ao span, obtém a tag pai do span "h1" e o próximo elemento irmão do h1, que é o "p"
+                if (conteudo.classList.contains('mostrar')) { //verifica se a tag "p" possui "mostrar"
+                    this.innerHTML = 'Ver mais'; //altera diretamente o conteúdo do span no HTML
                     conteudo.classList.remove('mostrar');
                 } else {
-                    this.innerHTML = 'Ocultar';
+                    this.innerHTML = 'Ocultar'; //altera diretamente o conteúdo do span no HTML
                     conteudo.classList.add('mostrar');
                 }
             });
