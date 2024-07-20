@@ -31,7 +31,7 @@
             height: 0px;
             overflow: hidden;
             transition: 0.3s;
-            padding: 2px 0px 0px 20px;
+            padding: 15px 0px 0px 20px;
         }
 
         .mostrar{
@@ -83,7 +83,7 @@
             span.addEventListener('click', function() {
             var conteudo = this.parentElement.nextElementSibling; //o this se refere ao span, obtém a tag pai do span "h1" e o próximo elemento irmão do h1, que é o "p"
                 if (conteudo.classList.contains('mostrar')) { //verifica se a tag "p" possui "mostrar"
-                    this.innerHTML = 'Ver mais'; //altera diretamente o conteúdo do span no HTML
+                    this.innerHTML = 'Ver mais!'; //altera diretamente o conteúdo do span no HTML
                     conteudo.classList.remove('mostrar');
                 } else {
                     this.innerHTML = 'Ocultar'; //altera diretamente o conteúdo do span no HTML
