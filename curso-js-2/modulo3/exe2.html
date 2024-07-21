@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagem Slider</title>
+  <style>
+    .container {
+      position: relative;
+      height: 500px;
+    }
+
+    .container img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out; /* Improved transition */
+    }
+
+    .container img:first-child { /* Show the first image initially */
+      opacity: 1;
+    }
+
+    .bullets {
+      text-align: center;
+    }
+
+    .bullet-single {
+      margin: 0 8px;
+      cursor: pointer;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: #ccc;
+    }
+
+    .active-bullet {
+      background-color: #333;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <img src="https://picsum.photos/id/237/300/200" alt="Image 1">
+    <img src="https://picsum.photos/id/238/300/200" alt="Image 2">
+    <img src="https://picsum.photos/id/239/300/200" alt="Image 3">
+  </div>
+
+  <div class="bullets">
+    <div class="bullet-single active-bullet"></div>
+    <div class="bullet-single"></div>
+    <div class="bullet-single"></div>
+  </div>
+
+  <script>
+    var lastIndex = 0;
+    var images = document.querySelectorAll('.container img');
+
+    images.forEach((item, index) => {
+      document.querySelectorAll('.bullet-single')[index].addEventListener('click', () => {
+        if (lastIndex !== index) { // Apenas altere se um bullet diferente for clicado
+          document.querySelectorAll('.bullet-single')[lastIndex].classList.remove('active-bullet');
+          document.querySelectorAll('.bullet-single')[index].classList.add('active-bullet');
+
+          images[lastIndex].style.opacity = 0;
+          images[index].style.opacity = 1;
+
+          lastIndex = index;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+<!-- 
+Seção Script: Contém código JavaScript que controla o comportamento dinâmico do slider.
+
+Variáveis:
+lastIndex: Armazena o índice da última imagem ativa (inicialmente definido como 0).
+images: Seleciona todos os elementos de imagem dentro do container usando querySelectorAll.
+
+Eventos de Escuta: O loop forEach itera por cada imagem:
+    * Para cada imagem, ele seleciona o elemento bullet correspondente no div bullets usando querySelectorAll no mesmo índice.
+    * Um event listener é adicionado ao bullet, aguardando um evento de clique.
+    * Quando um bullet é clicado (se lastIndex não for o mesmo que o índice do bullet atual):
+        * A classe active-bullet é removida do bullet anteriormente ativo.
+        * A classe active-bullet é adicionada ao bullet clicado, destacando-o.
+        * A opacidade da imagem anteriormente ativa é definida como 0 (oculta).
+        * A opacidade da imagem correspondente à imagem clicada é definida como 1 (visível).
+        * lastIndex é atualizado para o índice da nova imagem ativa.
+-->
