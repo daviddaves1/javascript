@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo</title>
+</head>
+<body>
+    <script>
+        /* {
+            Criando um escopo que só vai ficar definido apenas aqui dentro
+
+            /* let name = 'Guilherme'
+            function teste(){
+                console.log("Olá")
+            }
+
+            Porém, as funções ainda continuam funcionando mesmo fora dele quando são chamadas.
+           }
+        console.log(name) */
+
+
+
+        /*     function testes(){ //jeito antigo de declarar função
+
+        }
+
+        const testes = (text, parametro)=>{ //jeito morderno de declarar funções 
+                parametro(text)
+        }
+
+        testes("Hello World", (text)=>{
+            alert(text);
+        }); //Passando 2 parametros na função testes, onde o 1º é um texto e o 2º é uma função anônima      */
+
+        /* const array = ["Felipe", "Rafael", "David", "Hellen", "Yasmin", "Júlia", "Débora"];
+        const [a, b,...c] = array;
+
+        alert(array[0]); //Array recebeu as variaveis, e você pode escolher qual índice quer mostar
+        alert(c[0]); //variavel "c" recebeu o restante dos dados do array e você pode indicar qual indice quer mostrar */
+
+
+        var names = [
+            {
+                name : "Rafael"
+            },
+            {
+                name : "Felipe"
+            },
+        ]
+
+        const objects = [...names,{
+            name : "Guilherme"
+        }];
+
+        console.log(objects);
+
+        function testes(...number){
+            console.log(number[0][0]);
+        }
+
+        testes([1,2,3,4,5])
+
+
+    </script>
+</body>
+</html>

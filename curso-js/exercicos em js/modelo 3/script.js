@@ -6,7 +6,7 @@ function processing(){
 
     result.innerHTML = `<strong>Resultados: </strong>`;
 
-    if(jump <= 0 || input == 0 || end == 0){
+    if (jump <= 0 || input == 0 || end == 0){
         result.innerHTML = "Impossivel contar! Verifique e tente novamente.";
         return 0;
     }
