@@ -1,0 +1,43 @@
+body{
+    background-color: #0f008354;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main{
+    
+}
+
+main > h1{
+    background-color: #0f0083;
+    color: white;
+    padding: 0.2em;
+    border-radius: 0.5em;
+    background-image: linear-gradient(to right, #0b005b, #8c7dff);
+    text-align: center;
+    width: 16em;
+    margin: 0.7em auto;
+}
+
+main > p{
+    background-color: #c5bdff;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    margin: auto;
+}
+
+main input[type="text"]{
+    width: 40em; /* Largura do input */
+    height: 30px; /* Altura do input */
+    padding: 5px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #efe0ff; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    font-family: Arial, sans-serif; /* Fonte */
+    font-size: 16px; /* Tamanho da fonte */
+  
+    /* Aparência ao receber foco */
+    outline: none; /* Remove o contorno padrão */
+    border-color: #6200ff; /* Muda a cor da borda ao receber foco */
+    box-shadow: 0px 0px 1px rgba(0, 123, 255, 0.3); /* Adiciona uma sombra ao receber foco */
+}
