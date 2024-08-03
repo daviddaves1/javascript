@@ -19,6 +19,26 @@ peso.innerHTML += 106
 altura = document.querySelectorAll("main p")[4]
 altura.innerHTML += 1.83
 
-let data = document.querySelectorAll(".input1")[0]
+const dataInput = document.querySelector('.input1');
+const resultado = document.querySelector('.resultado');
+const fraseColetada = document.querySelector(".input2");
+const fraseResultado = document.querySelector('.fraseResultado');
 
-data.innerHTML = `<p>Data escolhida: ${data}`
+dataInput.addEventListener('change', () => {
+  resultado.textContent = `Data informada: ${dataInput.value}`;
+});
+
+fraseColetada.addEventListener('change', () => {
+  fraseResultado.textContent = `Frase escrita: ${fraseColetada.value}`;
+});
+
+let array = document.querySelectorAll(" main p")[6]
+
+array.innerHTML += [" Janeiro", " Fevereiro ", " Março", " Abril", " Maio", " Junho", " Julho", " Agosto", " Setembro", " Outubro", " Novembro", " Dezembro"];
+
+let jogo = {
+    nome : "League of Legends",
+    desenvolvedora : "Riot Games",
+    ano : 2016,
+}
+
