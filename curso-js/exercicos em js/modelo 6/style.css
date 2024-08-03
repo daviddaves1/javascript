@@ -1,52 +1,137 @@
-body{
-    background-color: #0f008354;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-main{
-    font-size: 1.2em;
+/* Desafio 1 */
+h2 {
+    font-size: 1.5rem;
 }
 
-main > h1{
-    background-color: #0f0083;
-    color: white;
-    padding: 0.2em;
+.card {
+    font-family: 'Roboto', sans-serif;
+    width: 20em;
+    height: 100%;
+    margin: 1em;
+    padding: 1em;
     border-radius: 0.5em;
-    background-image: linear-gradient(to right, #090051, #9283ff);
+    background: #222;
+    border: 0.25em solid #444;
+    box-shadow: 0 0 0.25em #222;
+    color: #191919;
+    font-size: 0.95em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h2 {
+    font-size: 1.5rem;
     text-align: center;
-    width: 16em;
-    margin: 0.7em auto;
+    color: #ececec;
+    margin-bottom: 0.625rem;
+}
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    border: 5px solid #444;
+    margin-bottom: 1rem;
 }
 
-main > p{
-    background-color: #c5bdff;
-    padding: 0.5em;
-    border-radius: 0.3em;
-    margin: auto;
-}
-
-main input[type="text"]{
-    width: 40em;
-    height: 30px;
-    padding: 5px;
-    border: 1px solid #ccc;
+.card p {
+    background: #fff;
     border-radius: 5px;
-    background-color: #efe0ff; 
-    color: #040303;
-    font-family: Arial, sans-serif; 
-    font-size: 16px;
-    outline: none;
-    border-color: #6200ff;
-    box-shadow: 0px 0px 1px rgba(0, 123, 255, 0.3);
-    margin-bottom: 1.5em;
+    padding: 5px;
+    margin-bottom: 0.625rem;
+    text-align: center;
 }
 
-main input[type="date"]{
-    height: 20px;
-    margin-left: 0.3em;
-    width: 10em;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    border-color: #6200ff;
+/* Desafio 2 */
+.citacao {
+    font-family: 'Special Elite', cursive;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 0 5px #222;
+
+    background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-powder-smoke-colorful-background-image_2164096.jpg');
+    color: white;
+}
+
+.citacao h2 {
+    margin-bottom: 0.75rem;
+}
+
+.citacao h3 {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.citacao blockquote {
+    margin-left: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 2rem;
+}
+
+.citacao p {
+    text-align: right;
+}
+
+/* Desafio 03 */
+.meses {
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    background: #ececec;
+    box-shadow: 2px 2px 5px #222;
+}
+
+/* Desafio 04 */
+.jogo {
+    font-family: 'Roboto', sans-serif;
+    width: 350px;
+    height: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    line-height: 2rem;
+
+    background-image: url('https://s2-techtudo.glbimg.com/6YvIsDcexAtTGOoYeVyeSAeex4U=/0x0:620x412/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/P/O/SliaVATJqpmTX6XqGMRA/2011-11-27-lol.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ececec;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px #222;
+}
+
+.jogo h2 {
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 1px #222;
+}
+
+.jogo span {
+    display: block;
+    font-size: 0.75rem;
+    text-shadow: 1px 1px 1px #222;
+}
+
+.jogo p {
+    background: #fff;
+    color: #191919;
+    border-radius: 8px;
+    padding: 3px 10px;
+    box-shadow: 0px 0px 2px #222;
 }

@@ -1,44 +1,61 @@
-let nomeLutador
-let nationality
-let idade
-let peso
+/* Desafio 01 */
+let lutador = 'Fedor Vladimirovich Emelianenko'
+let nacionalidade = 'Russo'
+let idade = 44
+let peso = 106
 let altura = 1.83
 
-nomeLutador = document.querySelectorAll('main p')[0]
-nomeLutador.innerHTML += "Fedor Vladimirovich Emelianenko"
+/* Aviso: NÃO USE essa forma para mostar conteúdo na página HTML, existem maneiras mais eficientes de fazer isso manipulando o DOM */
 
-nationality = document.querySelectorAll('main p')[1]
-nationality.innerHTML += "Russo"
+document.write(`<div class="card">
+                <h2>Lutador</h2>
+                <img src="imagens/Fedor_Emelianenko_Dec_2015.jpg" alt="Fedor Emelianenko">
+                <p>${lutador} </p>
+                <p>${nacionalidade} </p>
+                <p>${idade} anos </p>
+                <p>${peso} Kg </p>
+                <p>${altura} m </p>
+                </div>
+            `)
 
-idade = document.querySelectorAll("main p")[2]
-idade.innerHTML += 44
+/* Desafio 02 */
+const dia = 10
+const mes = 9
+const ano = 2021
+const FraseDoDia = "Seja curioso. Leia de tudo. Tente coisas novas. O que as pessoas chamam de inteligência se resume a curiosidade."
+const Autoria = "Aaron Swartz"
 
-peso = document.querySelectorAll("main p")[3]
-peso.innerHTML += 106
+document.write(`<div class="citacao">
+                <h2>Frase do Dia</h2>
+                <h3>${dia}/${mes}/${ano}</h3>
+                <blockquote>&#10077;${FraseDoDia}&#10078;</blockquote>
+                <p>${Autoria}</p>
+                </div>
+               `)
 
-altura = document.querySelectorAll("main p")[4]
-altura.innerHTML += 1.83
+/* Desafio 03 */
+let mesesDoAno = ['Janeiro', 'Fevereiro', 'Março']
 
-const dataInput = document.querySelector('.input1');
-const resultado = document.querySelector('.resultado');
-const fraseColetada = document.querySelector(".input2");
-const fraseResultado = document.querySelector('.fraseResultado');
+document.write(`<div class="meses">
+                <h2>Array de Meses do Ano</h2>
+                <p>${mesesDoAno[0]}, ${mesesDoAno[1]}, ${mesesDoAno[2]}, ... </p>
+                </div>
+              `)
 
-dataInput.addEventListener('change', () => {
-  resultado.textContent = `Data informada: ${dataInput.value}`;
-});
-
-fraseColetada.addEventListener('change', () => {
-  fraseResultado.textContent = `Frase escrita: ${fraseColetada.value}`;
-});
-
-let array = document.querySelectorAll(" main p")[6]
-
-array.innerHTML += [" Janeiro", " Fevereiro ", " Março", " Abril", " Maio", " Junho", " Julho", " Agosto", " Setembro", " Outubro", " Novembro", " Dezembro"];
-
+/* Desafio 04 */
 let jogo = {
-    nome : "League of Legends",
-    desenvolvedora : "Riot Games",
-    ano : 2016,
+    titulo : 'League Of Legends - LOL',
+    desenvolvedor : 'Riot Games',
+    anoLancamento : 2009 
 }
 
+document.write(`<div class="jogo">
+                <h2>Jogo</h2>
+                <span>Título</span>
+                <p>${jogo.titulo}</p>
+                <span>Desenvolvedor</span>
+                <p>${jogo.desenvolvedor}</p>
+                <span>Ano do Lançamento</span>
+                <p>${jogo.anoLancamento}</p>
+                </div>
+              `)
