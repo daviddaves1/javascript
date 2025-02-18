@@ -36,9 +36,9 @@
                 console.log("Hello, I are uanderful everyday!");
             })();
 
-            const counter = (function() {
+            const counter = function() {
             let count = 0; // Variável privada
-
+    
             return {
                 increment: function() {
                     count++;
@@ -52,13 +52,13 @@
                     return count;
                 }
                 };
-            })();
+            }();
 
             counter.increment(); // Saída: 1
             counter.increment(); // Saída: 2
             counter.decrement(); // Saída: 1
             console.log(counter.getCount()); // Saída: 1
-            console.log(counter.count);  // undefinedy
+            console.log(counter.count);  // undefined
 
         </script>
     </body>
