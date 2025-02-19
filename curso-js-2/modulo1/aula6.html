@@ -1,16 +1,28 @@
-<html>
-    <body>
-        <script>
-            var arr = ["Breno", "Rafael", "Vanessa", "Daves"];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = ["Breno", "Rafael", "Vanessa", "Daves"];
 
-            /* for(let i=0; i<arr.length; i++){
-                console.log(arr[i]);
-            } */
+        /* for(let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        } */
 
-            arr.forEach(function(value, index){
-                console.log(value); //Esse comando do forEach é incrível, com ele vc pode inserir novos elementos no array, consultar os dados através do value, ou a posição através do index, tudo isso percorrendo o array através do forEach.
-            })
+        arr.forEach(function(value, index){
+            console.log(value); /* O método forEach itera sobre cada elemento do array e passa automaticamente o valor do elemento (value) e o índice do elemento (index) para a função de callback a cada iteração */
+        })
 
-        </script>
-    </body>
+        console.log(`Agora usando o "for" convencional, dará o mesmo resultado.`)
+
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i])
+        }
+
+    </script>
+</body>
 </html>
