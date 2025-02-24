@@ -58,18 +58,18 @@
 
   <script>
     let images = document.querySelectorAll(".container > img")
-    let lastIndex = 0
+    let ultimoIndex = 0
 
     images.forEach((item, index)=> {
         document.querySelectorAll(".bullet-single")[index].addEventListener("click", ()=>{
-            if(lastIndex !== index){
-                document.querySelectorAll(".bullet-single")[lastIndex].classList.remove("active-bullet")
+            if(ultimoIndex !== index){
+                document.querySelectorAll(".bullet-single")[ultimoIndex].classList.remove("active-bullet")
                 document.querySelectorAll(".bullet-single")[index].classList.add("active-bullet")
 
-                images[lastIndex].style.opacity = 0
+                images[ultimoIndex].style.opacity = 0
                 images[index].style.opacity = 1
 
-                lastIndex = index
+                ultimoIndex = index
             }
         })
     });
