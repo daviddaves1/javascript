@@ -40,7 +40,7 @@
         alert(c[0]); //variavel "c" recebeu o restante dos dados do array e você pode indicar qual indice quer mostrar */
 
 
-        var names = [
+        /* var names = [
             {
                 name : "Rafael"
             },
@@ -59,9 +59,29 @@
             console.log(number[0][0]);
         }
 
-        testes([1,2,3,4,5])
+        testes([1,2,3,4,5]) */
 
 
+        function testes(){
+            return new Promise(function(resolve, reject){ //passando os parâmetros
+                const erro = true
+                if(erro){
+                    reject("Erro...") //chamado quando dá erro na operação
+                }else{
+                    resolve("A Promise foi resolvida com sucesso!") //chamado quando a operação foi um sucesso
+                }
+            })
+        }
+
+        testes().then((res)=> {
+            alert(res)
+        }).catch((err)=> {
+            alert(err)
+        })
+
+        /* then: É chamado quando a promessa é resolvida com sucesso (como se a condição do if fosse verdadeira).
+  
+        catch: É chamado quando a promessa é rejeitada (como se a condição do if fosse falsa e a execução passasse para o else). */
     </script>
 </body>
 </html>
